@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <!--Leaflet files -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+  <!-- 
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style> -->
+</head>
+
+<body>
+  <header>
+    <div class="alert">
+      <p><span class="alert__icon">!</span> Please add a valid ip address <br>
+      Eg, 0.0.0.0
+      </p>
+    </div>
+    <div class="row">
+      <form class="search">
+        <h1 class="search__title">IP Address Tracker</h1>
+
+        <div class="search__bar">
+          <input type="text" class="search__input" placeholder="Enter your ip address" name="search" />
+          <button class="search__button">
+            <img src="./images/icon-arrow.svg" class="search__icon" alt="Submit" />
+          </button>
+        </div>
+      </form>
+
+      <div class="details">
+        <div class="details__group">
+          <h4 class="details__header">ip address</h4>
+          <p class="details__content" id="details--ip">000.000.000.000</p>
+        </div>
+        <!---->
+        <div class="details__group">
+          <h4 class="details__header">Location</h4>
+          <p class="details__content" id="details--location">
+            Brooklyn, NY 10001
+          </p>
+        </div>
+        <!---->
+        <div class="details__group">
+          <h4 class="details__header">timezone</h4>
+          <p class="details__content" id="details--timezone">UTC-05:00</p>
+        </div>
+        <!---->
+        <div class="details__group">
+          <h4 class="details__header">isp</h4>
+          <p class="details__content" id="details--isp">SpaceX Starlink</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div id="mapid" class="main__map"></div>
+  </main>
+
+  <!-- add offset value dynamically using the API -->
+
+  <!-- <div class="attribution">
+
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+  <script src="./js/app.js" type="text/javascript"></script>
+</body>
+
+</html>
